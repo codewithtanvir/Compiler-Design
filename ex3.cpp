@@ -10,7 +10,7 @@
 using namespace std;
 
 bool isComment (char c){
-    char comment[] = {"//","/**/"};
+    char comment[] = {'/'};
     int num_comment = sizeof(comment) / sizeof(comment[0]); 
     for (int i = 0; i < num_comment; i++) {
         if (c == comment[i]) {
