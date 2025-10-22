@@ -9,32 +9,28 @@
 
 using namespace std;
 
-bool isComment (char c){
-    char comment[] = {'/'};
-    int num_comment = sizeof(comment) / sizeof(comment[0]); 
-    for (int i = 0; i < num_comment; i++) {
-        if (c == comment[i]) {
-            return true;
-        }
+void isComment(string line) {
+    
+    if (line.size() >= 2 && line[0] == '/' && line[1] == '/') {
+        cout << "It is a single-line comment" << endl;
+        return;
     }
-    return false;
+
+   
+    if (line.size() >= 4 && line[0] == '/' && line[1] == '*' && line[line.size() - 2] == '*' && line[line.size() - 1] == '/') {
+        cout << "It is a multi-line comment" << endl;
+        return;
+    }
+
+    cout << "It is not a comment" << endl;
 }
 
-int main(){
-    cout << "Enter an the line: ";
+int main() {
+    cout << "Enter a line: ";
     string input;
-    cin >> input;
+    getline(cin, input); 
 
-    int opCount = 1;
-    bool found = false;
-    for (char c : input) {
-        if (isComment(c)) {
-            cout << "comment" << opCount << ":  " << c << endl;
-            opCount++;
-            found = true;
-        }
-    }
-    if (!found) {
-        cout << "No comment found." << endl;
-    }
+    isComment(input);
+
+    return 0;
 }
