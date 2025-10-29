@@ -13,3 +13,15 @@
 
     /* multiple line   
     Comment */
+
+## Lab Task -2 Date: 29-Oct-2025
+   4. Write a program to determine whether the Given Input is Identifier or Not. []
+    Conditions/convention to detect identifier:
+    -The first character should be alphabet characters/underscore (A-Z, a-z, _)
+    -From the Second character should be alpha-numeric characters/underscore (A-Z, a-z, _ , 0-9)
+
+   5. Find the average value of the elements of an array.
+   6. Find the minimum and maximum value of the elements of an array.
+   7. Take two strings as your first and last name, then concatenate the two strings together so that you can find your full name:
+    e.g. First name = “XX” and Lastname = “YY”
+    output: full name = “XX YY”
